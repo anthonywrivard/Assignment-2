@@ -1,20 +1,29 @@
 <?php
+
 require('Form.php');
 require('Tools.php');
 
 # Array
 $numsym=file('numsym.txt');
 $words = file("wordsEn.txt");
+$form = new DWA\Form($_GET);
+$errors = [];
 
 
 # Variables 
 $password = "";
-$error=" ";
 
 # password
 if ($_GET) {
 	$totalwords = rand(intval($_GET["low"]), intval($_GET["high"]));
 	$totalnumsym = intval($_GET["extrachar"]);
+	
+if($form->isSubmitted()){
+	$errors = $form->validate([
+		'high' => 'required|numeric|min:5|max:11'
+	]);
+}
+	
 	
 	# create password
 	if(empty($errors)) {
