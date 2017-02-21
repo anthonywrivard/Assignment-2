@@ -1,8 +1,6 @@
 <?php
 
 class Tools {
-*
-*/
 static function dump($mixed = null) {
     echo '<pre>';
     var_dump($mixed);

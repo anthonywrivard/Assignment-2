@@ -1,5 +1,4 @@
 <?php
-require('password.php');
 require('Form.php');
 require('Tools.php');
 
