@@ -3,7 +3,10 @@
 require('Form.php');
 require('Tools.php');
 
-# Array
+use DWA\Form;
+use DWA\Tools;
+
+# Create arrays and extract files
 $numsym=file('numsym.txt');
 $words = file("wordsEn.txt");
 $form = new DWA\Form($_GET);
@@ -17,10 +20,12 @@ $password = "";
 if ($_GET) {
 	$totalwords = rand(intval($_GET["low"]), intval($_GET["high"]));
 	$totalnumsym = intval($_GET["extrachar"]);
+	$username = $_GET["name"];
 	
 if($form->isSubmitted()){
 	$errors = $form->validate([
-		'high' => 'required|numeric|min:5|max:11'
+		'high' => 'required|numeric|min:5|max:11',
+		'name' => 'required|alpha'
 	]);
 }
 	
