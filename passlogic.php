@@ -6,14 +6,10 @@ require('Tools.php');
 use DWA\Form;
 use DWA\Tools;
 
-# Create arrays and extract files
 $numSym=file('numsym.txt');
 $words = file("wordsEn.txt");
 $form = new DWA\Form($_GET);
 $errors = [];
-
-
-# Variables 
 $password = "";
 
 # Set values from GET
