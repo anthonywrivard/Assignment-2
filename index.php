@@ -26,7 +26,7 @@
 					<p>
 						<!-- Dropdown using presets to validate user and restrict inputs-->
 						<label for="low">What is the least number of words you want to render? (Between 1-5)</label>
-						<select id="low" name="low" value='<?=$form->prefill('low')?>'>
+						<select id="low" name="low">
 							<option value="1">1</option>
 							<option value="2">2</option>
 							<option value="3">3</option>
