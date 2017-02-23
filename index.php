@@ -18,7 +18,7 @@
 				<fieldset>
 					<p>
 						<!-- Making fake username to show sanitize function-->
-						<label for="name">Please enter your name:</label>
+						<label for="name">Please enter a username:</label>
 						<input class="name" type="text" id="name" name="name" value='<?=$form->prefill('name')?>'>
 							<?php if(empty($userName)):?><span class="asterisc"> Required*</span><?php endif?>
 					</p>
