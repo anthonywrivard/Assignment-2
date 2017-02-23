@@ -23,7 +23,7 @@ if ($_GET) {
 	if($form->isSubmitted()){
 		$errors = $form->validate([
 			'high' => 'required|numeric|min:5|max:11',
-			'name' => 'required'
+			'name' => 'required|alphaNumeric'
 			]);
 		}
 	
