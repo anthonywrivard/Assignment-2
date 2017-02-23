@@ -18,7 +18,7 @@
 				<fieldset>
 					<p>
 						<!-- Making fake username to show sanitize function-->
-						<label for="name">Please enter a username:</label>
+						<label for="name">Please enter a username:<span>*</span></label>
 						<input class="name" type="text" id="name" name="name" value='<?=$form->prefill('name')?>'>
 							<?php if(empty($userName)):?><span class="asterisc"> Required*</span><?php endif?>
 					</p>
@@ -37,7 +37,7 @@
 
 					<p>
 						<!-- Using text input with numeric, required, and value validation-->
-						<label for="high">What is the highest number of words you want to render? (Between 6-10)</label>
+						<label for="high">What is the highest number of words you want to render? (Between 6-10)<span>*</span></label>
 						<input class="high" type="text" id="high" name="high"  value='<?=$form->prefill('high')?>'>
 							<?php if(empty($totalWords)):?><span class="asterisc"> Required*</span><?php endif?>
 					</p>

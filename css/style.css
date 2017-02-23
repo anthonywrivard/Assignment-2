@@ -39,6 +39,10 @@ input[type=submit] {
 ul li {
 	list-style-type: none;
 }
+
+span {
+	color:red;
+}
 .bottom {
 	color: cornflowerblue;
 	background-color: black;
