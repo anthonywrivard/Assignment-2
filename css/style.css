@@ -1,59 +1,49 @@
-
-
 body {
-	 min-width:500px;
-	 margin-bottom:50px;
-	 width:60%;
-	 text-align:center;
-	 margin: 0 auto;
-	 font-family:Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
+	min-width: 500px;
+	margin-bottom: 50px;
+	width: 60%;
+	text-align: center;
+	margin: 0 auto;
+	font-family: Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif;
 }
-
 header {
 	height: 80px;
 	padding-top: 10px;
 	margin: 0 auto 20px;
 	width: 80%;
 }
-
 .asterisc {
-  color: red;
+	color: red;
 }
-
 .errors {
-	color:black;
-	background:#CB0D10;
+	color: black;
+	background: #CB0D10;
 	font-size: 25px;
 	text-align: center;
 	padding: 5px;
-	margin:5px;
+	margin: 5px;
 }
-
-.name  {
-	 width: 90px;
+.name {
+	width: 90px;
 }
-	
 .high {
 	width: 30px;
 }
-
 input[type=submit] {
-    padding:5px 15px; 
-    background:#ccc; 
-    border:0 none;
-    cursor:pointer;
-    border-radius: 20px; 
+	padding: 5px 15px;
+	background: #ccc;
+	border: 0 none;
+	cursor: pointer;
+	border-radius: 20px;
 }
-
 ul li {
-  list-style-type: none;
+	list-style-type: none;
 }
-
 .bottom {
-	color:cornflowerblue;
+	color: cornflowerblue;
 	background-color: black;
 	font-size: 25px;
 	text-align: center;
 	padding: 5px;
-	margin:5px;
+	margin: 5px;
 }
