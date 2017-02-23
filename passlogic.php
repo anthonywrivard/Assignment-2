@@ -7,7 +7,7 @@ use DWA\Form;
 use DWA\Tools;
 
 # Create arrays and extract files
-$numsym=file('numsym.txt');
+$numSym=file('numsym.txt');
 $words = file("wordsEn.txt");
 $form = new DWA\Form($_GET);
 $errors = [];
@@ -16,38 +16,39 @@ $errors = [];
 # Variables 
 $password = "";
 
-# password
+# Set values from GET
 if ($_GET) {
-	$totalwords = rand(intval($_GET["low"]), intval($_GET["high"]));
-	$totalnumsym = intval($_GET["extrachar"]);
-	$username = $_GET["name"];
-	
-if($form->isSubmitted()){
-	$errors = $form->validate([
-		'high' => 'required|numeric|min:5|max:11',
-		'name' => 'required|alpha'
-	]);
-}
-	
-	
-	# create password
-	if(empty($errors)) {
-		$rwords = "";
-		for ($i = 1; $i <= $totalwords; $i++) {
-	    	$rkeys = array_rand($words, 1);
-	    	$rwords .= $words[$rkeys]. " ";
+	$totalWords = rand(intval($_GET["low"]), intval($_GET["high"]));
+	$totalNumSym = intval($_GET["extraChar"]);
+	$userName = $_GET["name"]."@csci15.test";
+
+
+	# Check for errors and submitted with Form.php
+	if($form->isSubmitted()){
+		$errors = $form->validate([
+			'high' => 'required|numeric|min:5|max:11',
+			'name' => 'required|alpha'
+			]);
 		}
 	
-	$password = $rwords;
+	# create password from inputs
+	if(empty($errors)) {
+		$rWords = "";
+		for ($i = 1; $i <= $totalWords; $i++) {
+	    	$rKeys = array_rand($words, 1);
+	    	$rWords .= $words[$rKeys]. " ";
+		}
+	
+		$password = $rWords;
 		
-		if (isset($_GET["extrachar"])) {
-			for ($i = 1; $i <= $totalnumsym; $i++) {
-		    	$rkeys = array_rand($numsym, 1);
-		    	$password .= $numsym[$rkeys];
+		if (isset($_GET["extraChar"])) {
+			for ($i = 1; $i <= $totalNumSym; $i++) {
+		    	$rKeys = array_rand($numSym, 1);
+		    	$password .= $numSym[$rKeys];
 			}
 		}
 
-		if (isset($_GET["wordupcase"])) {
+		if (isset($_GET["wordUpCase"])) {
 			$password = strtoupper($password);
 		}
 	}
