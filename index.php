@@ -37,7 +37,7 @@
 
 					<p>
 						<!-- Using text input with numeric, required, and value validation-->
-						<label for="high">What is the greatest number of words you want to render? (Between 6-10)</label>
+						<label for="high">What is the highest number of words you want to render? (Between 6-10)</label>
 						<input class="high" type="text" id="high" name="high"  value='<?=$form->prefill('high')?>'>
 							<?php if(empty($totalWords)):?><span class="asterisc"> Required*</span><?php endif?>
 					</p>
